@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'Views/LoginView.dart';
+
 
 class App extends StatelessWidget {
 
@@ -12,10 +14,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "JBrain or Kakapp",
-        initialRoute: '/splashview',
+        initialRoute: '/loginview',
         routes: {
-         /* '/home' :  (context) =>  HomeView(),
           '/loginview' : (context) => LoginView(),
+         /* '/home' :  (context) =>  HomeView(),
+
           '/registerview' : (context) => RegisterView(),
           '/onBoardingview' : (context) => OnBoardingView(),
           '/splashview' : (context) => SplashView(),

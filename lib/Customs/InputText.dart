@@ -9,7 +9,7 @@ class InputText extends StatelessWidget {
 
 
 
-  InputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false}) : super(key:key);
+  InputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false,}) : super(key:key);
   final TextEditingController myController = TextEditingController();
 
 
@@ -32,6 +32,7 @@ class InputText extends StatelessWidget {
       maxLength: 20,
       enableSuggestions: !blIsPsswd,
       autocorrect: !blIsPsswd,
+
       decoration:  InputDecoration(
         border: OutlineInputBorder(),
         icon: Icon(Icons.account_circle_outlined),

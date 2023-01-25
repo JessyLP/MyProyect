@@ -48,8 +48,14 @@ class LoginView extends StatelessWidget{
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  inputUser,
-                  inputPassword,
+                  Padding(
+                    padding: EdgeInsets.all(40),
+                    child: inputUser
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(40),
+                    child: inputPassword,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children:  [
