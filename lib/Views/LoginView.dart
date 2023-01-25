@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Customs/InputText.dart';
+
 
 class LoginView extends StatelessWidget{
 
   LoginView({Key? key}) : super(key:key);
 
-  RFInputText inputUser = RFInputText(
+  InputText inputUser = InputText(
     titulo: "Correo:",
     ayuda:"ejemplo@gmail.com",);
-  RFInputText inputPassword = RFInputText(
+  InputText inputPassword = InputText(
     titulo: "Password:",
     ayuda:"Mayor de 7 caracteres",
     blIsPsswd: true,);
