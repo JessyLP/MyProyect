@@ -99,7 +99,7 @@ class _SplashViewState extends State<SplashView>
     _initPositioned(screenWidth);
 
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.secondarySystemFill,
+      backgroundColor: CupertinoColors.black,
       child: Stack(
         children: [
           const ShapeImagePositioned(),
