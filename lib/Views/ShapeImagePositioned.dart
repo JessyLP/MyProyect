@@ -10,11 +10,11 @@ class ShapeImagePositioned extends StatelessWidget {
       left: 0,
       top: top,
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width+400,
+        height: MediaQuery.of(context).size.height+300,
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/shape.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/shape.png'), fit: BoxFit.fitWidth),
         ),
       ),
     );

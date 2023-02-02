@@ -113,7 +113,7 @@ class _SplashViewState extends State<SplashView>
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Text(
-                  'Welcome back',
+                  'Welcome',
                   style: TextStyle(
                       color: CupertinoColors.white,
                       fontSize: 35,
@@ -123,7 +123,7 @@ class _SplashViewState extends State<SplashView>
                   height: 20,
                 ),
                 Text(
-                  'We promise you will have the most fuss-free time with us ever',
+                  'Thanks for using this app.',
                   style: TextStyle(
                       color: CupertinoColors.white.withOpacity(.8),
                       fontSize: 20,
