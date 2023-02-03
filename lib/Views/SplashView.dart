@@ -123,7 +123,7 @@ class _SplashViewState extends State<SplashView>
                   height: 20,
                 ),
                 Text(
-                  'Thanks for using this app.',
+                  'Thanks for using this app.                                                                                                                                                             ',
                   style: TextStyle(
                       color: CupertinoColors.white.withOpacity(.8),
                       fontSize: 20,

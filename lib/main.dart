@@ -9,15 +9,17 @@ void main() async{
 
   runApp( App());
 }
-/*
+
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+   MyApp({Key? key}) : super(key: key);
+   //FirebaseFirestore db = new FirebaseFirestore;
 
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
       debugShowCheckedModeBanner: false,
+      //hay que meterlo en un material app que este en un build.
       home: SplashView(),
     );
   }
-}*/
+}
