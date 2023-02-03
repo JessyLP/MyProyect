@@ -12,10 +12,10 @@ enum FormData {
 
 class LoginView extends StatefulWidget {
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<LoginView> createState() => _LoginView();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _LoginView extends State<LoginView> {
   Color enabled = const Color.fromARGB(255, 63, 56, 89);
   Color enabledtxt = Colors.white;
   Color deaible = Colors.grey;
@@ -46,9 +46,7 @@ class _LoginViewState extends State<LoginView> {
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
-            image: const NetworkImage(
-              'https://mir-s3-cdn-cf.behance.net/project_modules/fs/01b4bd84253993.5d56acc35e143.jpg',
-            ),
+            image: AssetImage('assets/images/campo.jpg'),
           ),
         ),
         child: Center(
