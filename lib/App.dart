@@ -21,8 +21,8 @@ class App extends StatelessWidget {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
           '/splash' : (context) => SplashView(),
-         /* '/home' :  (context) =>  HomeView(),
-
+          '/home' :  (context) =>  HomeView(),
+/*
           '/registerview' : (context) => RegisterView(),
           '/onBoardingview' : (context) => OnBoardingView(),
 */
