@@ -2,6 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../Firebase/Perfil.dart';
+import '../Firebase/Room.dart';
+import '../Firebase/singleton/DataHolder.dart';
+import 'GridView/RoomCard.dart';
+
 
 class HomeView extends StatefulWidget{
   @override
@@ -45,11 +50,10 @@ class _HomeViewState extends State<HomeView>{
         toFirestore: (Perfil perfil, _) => perfil.toFirestore());
 
     final docSnap = await docRef.get();
-    //final perfilUsuario = docSnap.data(); // Convert to Perfil object
     DataHolder().perfil=docSnap.data()!;
 
     if (DataHolder().perfil != null) {
-      print(DataHolder().perfil.edad);
+      print(DataHolder().perfil.age);
       setState(() {
         nombre=DataHolder().perfil.name!;
       });

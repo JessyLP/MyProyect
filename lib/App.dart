@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'Views/HomeView.dart';
 import 'Views/LoginView.dart';
 import 'Views/RegisterView.dart';
 import 'Views/SplashView.dart';
