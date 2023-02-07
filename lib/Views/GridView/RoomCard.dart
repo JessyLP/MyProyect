@@ -26,7 +26,6 @@ class RoomCard extends StatelessWidget{
             Text(Name)
           ],
         ),
-
       ),
     );
   }

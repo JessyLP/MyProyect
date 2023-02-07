@@ -92,17 +92,16 @@ class _HomeViewState extends State<HomeView>{
       backgroundColor: Colors.blueGrey,
       body: Center(
       child:
-
-      GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 3,
+        GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+        ),
+          itemCount: chatRooms.length,
+          itemBuilder: (BuildContext context, int index) {
+            return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+          }
+        ),
       ),
-      itemCount: chatRooms.length,
-      itemBuilder: (BuildContext context, int index) {
-      return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-      }
-    ),
-  ),
-  );
-}
+    );
+  }
 }
