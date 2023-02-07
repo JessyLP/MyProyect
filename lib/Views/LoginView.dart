@@ -216,7 +216,6 @@ class _LoginView extends State<LoginView> {
                                     email: emailController.text,
                                    password: passwordController.text,
                                   );Navigator.of(context).popAndPushNamed("/home");
-                                  print(" email : "+ emailController.text + " contraseña: " + passwordController.text);
                                 } on FirebaseAuthException catch (e) {
                                   print("------------> ERROR AL CREAR EL USUARIO.");
                                   if (e.code == 'weak-password') {
@@ -229,7 +228,7 @@ class _LoginView extends State<LoginView> {
                                 }
                                 print("USUARIO CREADO CORRECTAMENTE");
                               },
-                              child: Text(
+                              child:  Text(
                                 "Login",
                                 style: TextStyle(
                                   color: Colors.white,
@@ -256,7 +255,7 @@ class _LoginView extends State<LoginView> {
                 const SizedBox(
                   height: 10,
                 ),
-                FadeAnimation(
+                /*FadeAnimation(
                   delay: 1,
                   child: GestureDetector(
                     onTap: (() {
@@ -273,7 +272,7 @@ class _LoginView extends State<LoginView> {
                           letterSpacing: 0.5,
                         )),
                   ),
-                ),
+                ),*/
                 const SizedBox(height: 10),
                 FadeAnimation(
                   delay: 1,

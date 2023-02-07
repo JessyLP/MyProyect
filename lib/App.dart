@@ -17,14 +17,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "JBrain or Kakapp",
-        initialRoute: '/splash',
+        initialRoute: '/register',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
           '/splash' : (context) => SplashView(),
           '/home' :  (context) =>  HomeView(),
 /*
-          '/registerview' : (context) => RegisterView(),
           '/onBoardingview' : (context) => OnBoardingView(),
 */
         }
