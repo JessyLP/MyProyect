@@ -117,7 +117,7 @@ class _SplashViewState extends State<SplashView>
                   style: TextStyle(
                       color: CupertinoColors.white,
                       fontSize: 35,
-                      fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 20,

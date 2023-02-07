@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../Customs/Animations/FadeAnimation.dart';
 import '../Customs/HexColor.dart';
+import '../Customs/InputText.dart';
 import 'RegisterView.dart';
 
 
@@ -208,12 +210,24 @@ class _LoginView extends State<LoginView> {
                         FadeAnimation(
                           delay: 1,
                           child: TextButton(
-                              onPressed: () {
-                                // Navigator.pop(context);
-                                // Navigator.of(context)
-                                //     .push(MaterialPageRoute(builder: (context) {
-                                //   return MyApp(isLogin: true);
-                                // }));
+                              onPressed: () async {
+                                try {
+                                  final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+                                    email: emailController.text,
+                                   password: passwordController.text,
+                                  );Navigator.of(context).popAndPushNamed("/home");
+                                  print(" email : "+ emailController.text + " contraseña: " + passwordController.text);
+                                } on FirebaseAuthException catch (e) {
+                                  print("------------> ERROR AL CREAR EL USUARIO.");
+                                  if (e.code == 'weak-password') {
+                                    print('The password provided is too weak.');
+                                  } else if (e.code == 'email-already-in-use') {
+                                    print('The account already exists for that email.');
+                                  }
+                                } catch (e) {
+                                  print(e);
+                                }
+                                print("USUARIO CREADO CORRECTAMENTE");
                               },
                               child: Text(
                                 "Login",
