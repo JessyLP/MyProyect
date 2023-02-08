@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../Customs/Animations/FadeAnimation.dart';
 import '../Customs/HexColor.dart';
-import '../Customs/InputText.dart';
 import 'RegisterView.dart';
 
 
@@ -214,7 +213,7 @@ class _LoginView extends State<LoginView> {
                                 try {
                                   final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
                                     email: emailController.text,
-                                   password: passwordController.text,
+                                    password: passwordController.text,
                                   );Navigator.of(context).popAndPushNamed("/home");
                                 } on FirebaseAuthException catch (e) {
                                   print("------------> ERROR AL CREAR EL USUARIO.");
@@ -226,7 +225,6 @@ class _LoginView extends State<LoginView> {
                                 } catch (e) {
                                   print(e);
                                 }
-                                print("USUARIO CREADO CORRECTAMENTE");
                               },
                               child:  Text(
                                 "Login",
