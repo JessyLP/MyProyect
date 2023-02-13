@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
@@ -86,21 +87,45 @@ class _HomeViewState extends State<HomeView>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rooms'),
-        backgroundColor: Colors.black,
+        title: const Text('Quiz',textAlign: TextAlign.center),
+        backgroundColor: Colors.purple
+
       ),
       backgroundColor: Colors.blueGrey,
       body: Center(
       child:
-        GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-        ),
-          itemCount: chatRooms.length,
-          itemBuilder: (BuildContext context, int index) {
-            return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-          }
-        ),
+          Container(
+              child:
+                GridView.builder(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                    ),
+                    itemCount: chatRooms.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+                    }
+                ),
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: const [0.1, 0.4, 0.7, 0.9],
+                  colors: [
+                    HexColor("#4b4293").withOpacity(0.8),
+                    HexColor("#4b4293"),
+                    HexColor("#08418e"),
+                    HexColor("#08418e")
+                  ],
+                ),
+              borderRadius:BorderRadius.circular(10),
+              //border: Border.all(color: Colors.pink,width: 2),
+              boxShadow:[BoxShadow(color: Colors.purple,offset: Offset(5.0,5.0),blurRadius: 12.0)]
+
+            ),
+            padding: EdgeInsets.all(10),
+            margin:  EdgeInsets.only(left: 40,right: 40,bottom: 20,top: 20),
+          )
+
       ),
       bottomNavigationBar: BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
@@ -110,10 +135,9 @@ class _HomeViewState extends State<HomeView>{
       /*selectedLabelStyle: textTheme.caption,
         unselectedLabelStyle: textTheme.caption,*/
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "HOME"),
-        //BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "FAV"),
-        //BottomNavigationBarItem(icon: Icon(Icons.message),label: "MENSAJES"),
-        BottomNavigationBarItem(icon: Icon(Icons.person),label: "PERFIL")
+        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Quiz"),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Tus Juegos"),
+        BottomNavigationBarItem(icon: Icon(Icons.person),label: "User")
       ],
     ),
     );
