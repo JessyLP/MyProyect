@@ -134,7 +134,7 @@ class _HomeViewState extends State<HomeView>{
       unselectedItemColor: Colors.white12.withOpacity(.60),
       /*selectedLabelStyle: textTheme.caption,
         unselectedLabelStyle: textTheme.caption,*/
-        onTap: ,
+
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: "Quiz"),
         BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Tus Juegos"),
