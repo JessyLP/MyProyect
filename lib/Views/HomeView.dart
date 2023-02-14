@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView>{
   FirebaseFirestore db=FirebaseFirestore.instance;
   String nombre="AQUI IRA EL NOMBRE";
   List<Room> chatRooms = [];
-
+  int _selectedIndex = 0;
 
   @override
   void initState(){
@@ -83,13 +83,19 @@ class _HomeViewState extends State<HomeView>{
     Navigator.of(context).pushNamed("/ChatView");
   }
 
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Quiz',textAlign: TextAlign.center),
-        backgroundColor: Colors.purple
-
+        backgroundColor: Colors.purple,
+        elevation: 10,
       ),
       backgroundColor: Colors.blueGrey,
       body: Center(
@@ -132,15 +138,19 @@ class _HomeViewState extends State<HomeView>{
       backgroundColor: Colors.purple.shade900,
       selectedItemColor: Colors.blueAccent.shade200,
       unselectedItemColor: Colors.white12.withOpacity(.60),
+        mouseCursor: SystemMouseCursors.click,
       /*selectedLabelStyle: textTheme.caption,
         unselectedLabelStyle: textTheme.caption,*/
 
-      items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Quiz"),
+        items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Quiz",),
         BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Tus Juegos"),
         BottomNavigationBarItem(icon: Icon(Icons.person),label: "User")
-      ],
+      ],currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        elevation: 10,
     ),
+
     );
-  }
+      }
 }
