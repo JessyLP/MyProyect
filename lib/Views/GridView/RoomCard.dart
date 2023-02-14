@@ -22,8 +22,18 @@ class RoomCard extends StatelessWidget{
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(ImgUrl),
-            Text(Name)
+            Image.network(ImgUrl,width: 150,height: 150),
+            const SizedBox(height: 10,),
+            Text(Name,style: const TextStyle(color: Colors.purple ,
+                shadows: <Shadow>[
+                  Shadow(
+                  offset: Offset(10.0, 10.0),
+                    blurRadius: 7.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ],
+              )
+            )
           ],
         ),
       ),

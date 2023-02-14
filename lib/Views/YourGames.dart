@@ -23,18 +23,6 @@ Widget build(BuildContext context) {
 
     ),
     backgroundColor: Colors.blueGrey,
-    body: Center(
-      child:
-      GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-          ),
-          itemCount: chatRooms.length,
-          itemBuilder: (BuildContext context, int index) {
-            return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-          }
-      ),
-    ),
     bottomNavigationBar: BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.purple.shade900,
