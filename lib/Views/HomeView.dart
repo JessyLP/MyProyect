@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/UsuarioView.dart';
+import 'package:my_proyect/Views/YourGames.dart';
 
 import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
@@ -89,6 +91,11 @@ class _HomeViewState extends State<HomeView>{
     });
   }
 
+  List<Widget> _paginas=[
+    HomeView(),
+    YourGames(),
+    UsuarioView(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,9 +104,18 @@ class _HomeViewState extends State<HomeView>{
         backgroundColor: Colors.purple,
         elevation: 10,
       ),
-      backgroundColor: Colors.blueGrey,
-      body: Center(
-      child:
+
+      backgroundColor: Colors./*cyan*/transparent,
+      body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              colorFilter: ColorFilter.mode(
+                  HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
+              image: AssetImage("assets/images/arboles.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+        child:
           Container(
               child:
                 GridView.builder(
