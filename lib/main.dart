@@ -21,7 +21,7 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp( App());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         title: 'JBrain or Kakapp',
-        initialRoute: '/',
+        initialRoute: '/bar',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/home',
+        initialRoute: '/bar',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),

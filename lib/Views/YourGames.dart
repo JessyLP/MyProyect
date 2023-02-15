@@ -22,20 +22,7 @@ Widget build(BuildContext context) {
 
 
     ),
-    backgroundColor: Colors.blueGrey,
-    bottomNavigationBar: BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.purple.shade900,
-      selectedItemColor: Colors.blueAccent.shade200,
-      unselectedItemColor: Colors.white12.withOpacity(.60),
-      /*selectedLabelStyle: textTheme.caption,
-        unselectedLabelStyle: textTheme.caption,*/
-      items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Quiz"),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Tus Juegos"),
-        BottomNavigationBarItem(icon: Icon(Icons.person),label: "User")
-      ],
-    ),
+
   );
 }
 }
