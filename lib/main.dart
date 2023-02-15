@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/formulario',
+        initialRoute: '/bar',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
           '/home' :  (context) =>  HomeView(),
           '/usuario':(context)=> UsuarioView(),
           '/bar' :  (context) =>  BarMenu(),
-          '/formulario' :  (context) =>  FormView(),
+         '/formulario' :  (context) =>  FormView(),
 
         },
       );
