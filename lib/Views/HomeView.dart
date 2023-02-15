@@ -8,7 +8,7 @@ import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
-import 'GridView/RoomCard.dart';
+import 'GridViewHome/RoomCard.dart';
 
 
 class HomeView extends StatefulWidget{

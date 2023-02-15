@@ -17,11 +17,21 @@ class _YourGames extends State<YourGames>{
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: const Text('Tus Juegos',textAlign: TextAlign.center),
+        title: const Text('Tus Fotos',textAlign: TextAlign.center),
         backgroundColor: Colors.purple,
         elevation: 10,
       ),
 
+    floatingActionButton: FloatingActionButton(
+      backgroundColor:  Colors.purpleAccent[100],
+      hoverColor: Colors.white,
+      //foregroundColor: Colors.black,
+      mini: true,
+      onPressed: () {
+        Navigator.of(context).pushNamed("/form");
+      },
+      child: Icon(Icons.add,size: 20),
+    ),
   );
 }
 }
