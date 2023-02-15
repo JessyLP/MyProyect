@@ -16,12 +16,11 @@ class _YourGames extends State<YourGames>{
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      title: const Text('Rooms'),
-      backgroundColor: HexColor("#08418e"),
-
-
-    ),
+      appBar: AppBar(
+        title: const Text('Tus Juegos',textAlign: TextAlign.center),
+        backgroundColor: Colors.purple,
+        elevation: 10,
+      ),
 
   );
 }

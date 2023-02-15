@@ -100,7 +100,7 @@ class _HomeViewState extends State<HomeView>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Quiz',textAlign: TextAlign.center),
+        title: const Text('Games',textAlign: TextAlign.center),
         backgroundColor: Colors.purple,
         elevation: 10,
       ),
