@@ -47,6 +47,7 @@ dependencies:
   build_web_compilers: ^3.2.3
   pin_code_fields: ^7.4.0
   fluttertoast: ^8.1.2
+  image_picker: ^0.8.6
 
 
 dev_dependencies:
@@ -75,6 +76,7 @@ flutter:
   # assets:
   assets:
     - assets/images/
+    - assets/iconos/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -6,9 +6,6 @@ class InputText extends StatelessWidget {
   final String ayuda;
   final bool blIsPsswd;
 
-
-
-
   InputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false,}) : super(key:key);
   final TextEditingController myController = TextEditingController();
 

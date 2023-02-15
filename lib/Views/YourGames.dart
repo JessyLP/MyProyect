@@ -28,7 +28,7 @@ Widget build(BuildContext context) {
       //foregroundColor: Colors.black,
       mini: true,
       onPressed: () {
-        Navigator.of(context).pushNamed("/form");
+        Navigator.of(context).pushNamed("/formulario");
       },
       child: Icon(Icons.add,size: 20),
     ),

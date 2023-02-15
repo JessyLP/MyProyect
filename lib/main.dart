@@ -9,6 +9,7 @@ import 'BarMenu.dart';
 import 'Firebase/singleton/DataHolder.dart';
 import 'Views/HomeView.dart';
 import 'Views/LoginView.dart';
+import 'Views/PersonalPhotos/FormView.dart';
 import 'Views/RegisterView.dart';
 import 'firebase_options.dart';
 
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
           '/splash' : (context) => SplashView(),
           '/home' :  (context) =>  HomeView(),
           '/bar' :  (context) =>  BarMenu(),
+          '/formulario' :  (context) =>  FormView(),
+
         },
       );
     }
@@ -62,11 +65,11 @@ class MyApp extends StatelessWidget {
           '/home' :  (context) =>  HomeView(),
           '/usuario':(context)=> UsuarioView(),
           '/bar' :  (context) =>  BarMenu(),
+          '/formulario' :  (context) =>  FormView(),
+
         },
       );
     }
-    //print("La PLATAFORMA ES ..... --> "+DataHolder().platformAdmin.isAndroidPlatform().toString());
-
     return materialAppMobile;
 
   }

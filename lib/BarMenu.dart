@@ -58,7 +58,7 @@ class _BarMenu extends State<BarMenu> {
             },
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home),label: "Games",),
-              BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Tus Fotos"),
+              BottomNavigationBarItem(icon: Icon(Icons.photo_library),label: "Images"),
               BottomNavigationBarItem(icon: Icon(Icons.person),label: "User")
             ],
           ),
