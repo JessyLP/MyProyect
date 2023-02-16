@@ -147,7 +147,6 @@ class _HomeViewState extends State<HomeView>{
             padding: EdgeInsets.all(10),
             margin:  EdgeInsets.only(left: 40,right: 40,bottom: 20,top: 20),
           )
-
       ),
 
     );

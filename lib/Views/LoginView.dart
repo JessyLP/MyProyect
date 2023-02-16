@@ -214,7 +214,7 @@ class _LoginView extends State<LoginView> {
                                   final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
                                     email: emailController.text,
                                     password: passwordController.text,
-                                  );Navigator.of(context).popAndPushNamed("/home");
+                                  );Navigator.of(context).popAndPushNamed("/bar");
                                 } on FirebaseAuthException catch (e) {
                                   print("------------> ERROR AL CREAR EL USUARIO.");
                                   if (e.code == 'weak-password') {

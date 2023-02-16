@@ -1,7 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:page_transition/page_transition.dart';
 
 
+import '../Firebase/singleton/DataHolder.dart';
 import 'LoginView.dart';
 import 'ShapeImagePositioned.dart';
 
@@ -79,11 +82,53 @@ class _SplashViewState extends State<SplashView>
       });
   }
 
+
+
+  void loadAllData() async{
+    await Future.delayed(Duration(seconds: 10000));
+    //CARGAMOS TODOS LOS RECURSOS
+
+    //if(FirebaseAuth.instance.currentUser==null){
+    if(DataHolder().perfil.uid==null){
+      setState(() {
+        Navigator.of(context).popAndPushNamed("/login");
+      });
+    }
+    else{
+      bool existe=await checkExistingProfile();
+      if(existe){
+        setState(() {
+          Navigator.of(context).popAndPushNamed("/home");
+        });
+      }
+      else{
+        setState(() {
+          Navigator.of(context).popAndPushNamed("/register");
+        });
+      }
+
+
+
+    }
+  }
+
+  Future<bool> checkExistingProfile() async{
+    String? idUser=FirebaseAuth.instance.currentUser?.uid;
+    print(idUser);
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    final docRef = db.collection("perfiles").doc(idUser);
+
+    DocumentSnapshot docsnap= await docRef.get();
+
+    return docsnap.exists;
+  }
+
   @override
   void initState() {
     _initButtonScale();
     _initScreenScale();
     super.initState();
+    loadAllData();
   }
 
   @override

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/SplashView.dart';
 
 import 'Views/HomeView.dart';
 import 'Views/UsuarioView.dart';
@@ -17,6 +18,7 @@ class _BarMenu extends State<BarMenu> {
   int _paginaIndex=0;
 
   List<Widget> _paginas=[
+    //SplashView(),
     HomeView(),
     YourGames(),
     UsuarioView(),
