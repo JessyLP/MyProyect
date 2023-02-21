@@ -6,9 +6,6 @@ class InputText extends StatelessWidget {
   final String ayuda;
   final bool blIsPsswd;
 
-
-
-
   InputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false,}) : super(key:key);
   final TextEditingController myController = TextEditingController();
 
@@ -35,16 +32,16 @@ class InputText extends StatelessWidget {
 
       decoration:  InputDecoration(
         border: OutlineInputBorder(),
-        icon: Icon(Icons.account_circle_outlined),
+        icon: Icon(Icons.person),
         labelText: titulo,
         labelStyle: TextStyle(
-          color: Color(0xFF6B11A4),
+          color: Colors.black,
           fontSize: 20,
           fontStyle: FontStyle.italic,
         ),
         helperText: ayuda,
         suffixIcon: Icon(
-          Icons.check_circle,
+          Icons.abc,
         ),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Color(0xFF6200EE)),

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 
 import '../Customs/Animations/FadeAnimation.dart';
 import '../Customs/HexColor.dart';
@@ -290,15 +290,15 @@ class _RegisterViewState extends State<RegisterView> {
                                   } catch (e) {
                                     print(e);}
                                 }else{
-                                  Fluttertoast.showToast(
-                                      msg: "The passwords are not the same.",
-                                      toastLength: Toast.LENGTH_SHORT,
-                                      gravity: ToastGravity.CENTER,
-                                      timeInSecForIosWeb: 1,
-                                      backgroundColor: Colors.purple,
-                                      textColor: Colors.white,
-                                      fontSize: 16.0
-                                  );
+                                  // Fluttertoast.showToast(
+                                  //     msg: "The passwords are not the same.",
+                                  //     toastLength: Toast.LENGTH_SHORT,
+                                  //     gravity: ToastGravity.CENTER,
+                                  //     timeInSecForIosWeb: 1,
+                                  //     backgroundColor: Colors.purple,
+                                  //     textColor: Colors.white,
+                                  //     fontSize: 16.0
+                                  // );
                                 }
                               },
                               child:  Text(
