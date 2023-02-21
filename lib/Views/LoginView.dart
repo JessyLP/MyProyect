@@ -69,11 +69,11 @@ class _LoginView extends State<LoginView> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         FadeAnimation(
-                          delay: 0.8,
-                          child: Image.network(
-                            "https://cdni.iconscout.com/illustration/premium/thumb/job-starting-date-2537382-2146478.png",
+                          delay: 0,
+                          child: Image(
                             width: 100,
                             height: 100,
+                            image: AssetImage('assets/images/dragon.gif'),
                           ),
                         ),
                         const SizedBox(

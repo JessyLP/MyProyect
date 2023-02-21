@@ -1,12 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:my_proyect/BarMenu.dart';
 
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
-import 'GridView/RoomCard.dart';
+import 'GridViewHome/RoomCard.dart';
 
 
 class HomeView extends StatefulWidget{

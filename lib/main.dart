@@ -1,8 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_proyect/BarMenu.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
+import 'Firebase/singleton/DataHolder.dart';
+import 'Views/HomeView.dart';
+import 'Views/LoginView.dart';
+import 'Views/RegisterView.dart';
+import 'Views/SplashView.dart';
 import 'firebase_options.dart';
 
 
@@ -14,20 +21,55 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp( App());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({Key? key}) : super(key: key);
-   //FirebaseFirestore db = new FirebaseFirestore;
+  //const MyApp({super.key});
+
+  MyApp ({Key?key}):super (key: key);
+  FirebaseFirestore db = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
-    return  CupertinoApp(
-      debugShowCheckedModeBanner: false,
-      //hay que meterlo en un material app que este en un build.
-      home: SplashView2(),
-    );
+    MaterialApp materialAppMobile=const MaterialApp();
+
+    if(DataHolder().platformAdmin.isAndroidPlatform() ||
+        DataHolder().platformAdmin.isIOSPlatform()){
+      //print("ENTRO EN ANDROID O IOS");
+      materialAppMobile=MaterialApp(
+        debugShowCheckedModeBanner: false,
+        debugShowMaterialGrid: false,
+        title: 'JBrain or Kakapp',
+        initialRoute: '/home',
+        routes: {
+          '/login' : (context) => LoginView(),
+          '/register' : (context) => RegisterView(),
+          '/splash' : (context) => SplashView(),
+          '/splash2' : (context) => SplashView2(),
+          '/home' :  (context) =>  HomeView(),
+        },
+      );
+    }
+    else{
+      materialAppMobile=MaterialApp(
+        debugShowCheckedModeBanner: false,
+        debugShowMaterialGrid: false,
+        initialRoute: '/splash2',
+        routes: {
+          '/login' : (context) => LoginView(),
+          '/register' : (context) => RegisterView(),
+          '/splash' : (context) => SplashView(),
+          '/splash2' : (context) => SplashView2(),
+          '/home' :  (context) =>  HomeView(),
+          '/bar' :  (context) =>  BarMenu(),
+
+        },
+      );
+    }
+    //print("La PLATAFORMA ES ..... --> "+DataHolder().platformAdmin.isAndroidPlatform().toString());
+
+    return materialAppMobile;
+
   }
 }
-
