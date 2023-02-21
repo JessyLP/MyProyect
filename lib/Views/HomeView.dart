@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:my_proyect/BarMenu.dart';
 
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
@@ -102,6 +103,7 @@ class _HomeViewState extends State<HomeView>{
           }
         ),
       ),
+      //bottomNavigationBar: BarMenu()
     );
   }
 }
