@@ -53,7 +53,7 @@ class _SplashView2 extends State<SplashView2>{
       await DataHolder().descargarMIPerfil();
       if(DataHolder().isPerfilDownloaded()==true){
         //if(await checkPerfilExistance()==true){
-        Navigator.of(context).popAndPushNamed("/home");
+        Navigator.of(context).popAndPushNamed("/bar");
       }else{
         Navigator.of(context).popAndPushNamed('/register');
 

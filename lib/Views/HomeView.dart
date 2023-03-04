@@ -79,7 +79,7 @@ class _HomeViewState extends State<HomeView>{
   }
   void listItemShortClicked(int index){
     DataHolder().selectedChatRoom=chatRooms[index];
-    Navigator.of(context).pushNamed("/ChatView");
+   // Navigator.of(context).pushNamed("/Games");
   }
 
   @override

@@ -3,7 +3,7 @@ import 'package:my_proyect/Views/SplashView.dart';
 
 import 'Views/HomeView.dart';
 import 'Views/UsuarioView.dart';
-import 'Views/YourGames.dart';
+import 'Views/YourPhotos.dart';
 
 
 class BarMenu extends StatefulWidget {
@@ -20,7 +20,7 @@ class _BarMenu extends State<BarMenu> {
   List<Widget> _paginas=[
     //SplashView(),
     HomeView(),
-    YourGames(),
+    YourPhotos(),
     UsuarioView(),
   ];
 

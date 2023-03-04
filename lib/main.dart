@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
           '/splash' : (context) => SplashView(),
           '/splash2' : (context) => SplashView2(),
           '/home' :  (context) =>  HomeView(),
+          '/bar' :  (context) =>  BarMenu(),
         },
       );
     }
