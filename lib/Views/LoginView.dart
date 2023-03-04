@@ -47,7 +47,7 @@ class _LoginView extends State<LoginView> {
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
-            image: AssetImage('assets/images/campo.jpg'),
+            image: AssetImage('assets/images/mar.gif'),
           ),
         ),
         child: Center(

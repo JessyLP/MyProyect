@@ -43,7 +43,7 @@ class _SplashView2 extends State<SplashView2>{
 
 
   void isUserLogged() async{
-    await Future.delayed(Duration(seconds: 20));
+    await Future.delayed(Duration(seconds: 5));
     //FirebaseAuth.instance.signOut();
     if(FirebaseAuth.instance.currentUser==null){
       Navigator.of(context).popAndPushNamed("/login");
@@ -82,23 +82,23 @@ class _SplashView2 extends State<SplashView2>{
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
-                image: AssetImage('assets/images/fondoSplash.jpg'),
+                image: AssetImage('assets/images/fondo.gif'),
               ),
             ),
             child:
             Column(
               children: [
                 const SizedBox(
-                  height: 200,
+                  height: 50,
                 ),
-                Image.asset('assets/images/dragonViejo.gif',height: 200,),
+              //  Image.asset('assets/images/BM.gif',height: 200,),
+                Image.asset('assets/images/logoCer.png',height: 200,),
                 const SizedBox(
-                  height: 150,
+                  height: 100,
                 ),
-                Text("Please, wait some seconds...                                                                    "
-                  ,style: TextStyle(color: Colors.white,fontSize: 25,),),
-
                 Image.asset('assets/images/loginLlama.gif',height: 100),
+                Text("Please, wait some seconds...                                                                    "
+                  , textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 25,),),
               ],
             )
         )

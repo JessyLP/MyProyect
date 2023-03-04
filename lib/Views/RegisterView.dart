@@ -53,7 +53,7 @@ class _RegisterViewState extends State<RegisterView> {
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
-            image: AssetImage('assets/images/campo.jpg'),
+            image: AssetImage('assets/images/fondo.gif'),
           ),
         ),
         child: Center(
@@ -75,11 +75,11 @@ class _RegisterViewState extends State<RegisterView> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         FadeAnimation(
-                          delay: 0.8,
-                          child: Image.network(
-                            "https://cdni.iconscout.com/illustration/premium/thumb/job-starting-date-2537382-2146478.png",
+                          delay: 0,
+                          child: Image(
                             width: 100,
                             height: 100,
+                            image: AssetImage('assets/images/register.gif'),
                           ),
                         ),
                         const SizedBox(
