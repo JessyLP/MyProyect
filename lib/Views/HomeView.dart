@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
-import 'GridViewHome/RoomCard.dart';
+import 'GridView/Calculo.dart';
+import 'GridView/Memory.dart';
+import 'GridView/Quiz.dart';
+import 'GridView/RoomCard.dart';
 
 
 class HomeView extends StatefulWidget{
@@ -77,6 +80,9 @@ class _HomeViewState extends State<HomeView>{
     });
 
   }
+
+
+
   void listItemShortClicked(int index){
     DataHolder().selectedChatRoom=chatRooms[index];
    // Navigator.of(context).pushNamed("/Games");
@@ -90,7 +96,110 @@ class _HomeViewState extends State<HomeView>{
         backgroundColor: Colors.black,
       ),*/
       backgroundColor: Colors.blueGrey,
-      body: Center(
+
+
+      body: Container(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                GridView.count(
+                  primary: true,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 2,
+                  shrinkWrap: true,
+                  children: <Widget>[
+                    Container(
+                      //color: Colors.teal[100],
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/memorizar1.png'),
+                        ),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).popAndPushNamed("/memory");
+                        },
+                        child: Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.all(8),
+                          child: const Text("MEMORIZA"),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      //color: Colors.teal[200],
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/cal1.png'),
+                        ),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).popAndPushNamed("/cal");
+                        },
+                        child: Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.all(8),
+                          child: const Text('CALCULO',textAlign: TextAlign.center,),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      //color: Colors.teal[300],
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/quiz1.png'),
+                        ),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).popAndPushNamed("/quiz");
+                          },
+                        child: Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: const EdgeInsets.all(8),
+                          child: const Text('QUIZ'),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*body: Center(
       child:
         GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -105,4 +214,4 @@ class _HomeViewState extends State<HomeView>{
       //bottomNavigationBar: BarMenu()
     );
   }
-}
+}*/

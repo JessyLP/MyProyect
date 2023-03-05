@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_proyect/BarMenu.dart';
+import 'package:my_proyect/Views/GridView/Calculo.dart';
+import 'package:my_proyect/Views/GridView/Memory.dart';
+import 'package:my_proyect/Views/GridView/Quiz.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
 import 'Firebase/singleton/DataHolder.dart';
 import 'Views/HomeView.dart';
@@ -49,6 +52,10 @@ class MyApp extends StatelessWidget {
           '/splash2' : (context) => SplashView2(),
           '/home' :  (context) =>  HomeView(),
           '/bar' :  (context) =>  BarMenu(),
+
+          '/memory' :  (context) =>  Memory(),
+          '/quiz' :  (context) =>  Quiz(),
+          '/cal' :  (context) =>  Calculo(),
         },
       );
     }
@@ -64,6 +71,11 @@ class MyApp extends StatelessWidget {
           '/splash2' : (context) => SplashView2(),
           '/home' :  (context) =>  HomeView(),
           '/bar' :  (context) =>  BarMenu(),
+
+          '/memory' :  (context) =>  Memory(),
+          '/quiz' :  (context) =>  Quiz(),
+          '/cal' :  (context) =>  Calculo(),
+
 
         },
       );
