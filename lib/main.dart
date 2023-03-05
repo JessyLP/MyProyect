@@ -6,11 +6,12 @@ import 'package:flutter/services.dart';
 import 'package:my_proyect/BarMenu.dart';
 import 'package:my_proyect/Views/GridView/Calculo.dart';
 import 'package:my_proyect/Views/GridView/Memory.dart';
-import 'package:my_proyect/Views/GridView/Quiz.dart';
+import 'package:my_proyect/Views/GridView/Quiz/Quiz.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
 import 'Firebase/singleton/DataHolder.dart';
 import 'Views/HomeView.dart';
 import 'Views/LoginView.dart';
+import 'Views/PersonalPhotos/FormView.dart';
 import 'Views/RegisterView.dart';
 import 'Views/SplashView.dart';
 import 'firebase_options.dart';
@@ -52,6 +53,8 @@ class MyApp extends StatelessWidget {
           '/splash2' : (context) => SplashView2(),
           '/home' :  (context) =>  HomeView(),
           '/bar' :  (context) =>  BarMenu(),
+          '/images' :  (context) =>  FormView(),
+
 
           '/memory' :  (context) =>  Memory(),
           '/quiz' :  (context) =>  Quiz(),
@@ -71,6 +74,8 @@ class MyApp extends StatelessWidget {
           '/splash2' : (context) => SplashView2(),
           '/home' :  (context) =>  HomeView(),
           '/bar' :  (context) =>  BarMenu(),
+          '/images' :  (context) =>  FormView(),
+
 
           '/memory' :  (context) =>  Memory(),
           '/quiz' :  (context) =>  Quiz(),

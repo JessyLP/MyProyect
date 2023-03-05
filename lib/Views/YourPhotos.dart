@@ -28,7 +28,7 @@ class _YourPhotos extends State<YourPhotos>{
         //foregroundColor: Colors.black,
         mini: true,
         onPressed: () {
-          Navigator.of(context).pushNamed("/home",arguments: "a");
+          Navigator.of(context).popAndPushNamed("/images");
         },
         child: Icon(Icons.add,size: 20),
       ),
