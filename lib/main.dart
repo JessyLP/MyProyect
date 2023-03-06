@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/memory',
+        initialRoute: '/splash2',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),

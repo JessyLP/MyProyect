@@ -54,8 +54,8 @@ class _MemoryState extends State<Memory> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              info_card("Tries", "$tries"),
-              info_card("Score", "$score"),
+              info_card("Intentos", "$tries"),
+              info_card("Puntuación", "$score"),
             ],
           ),
           SizedBox(
