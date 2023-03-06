@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
-import 'GridView/Calculo.dart';
-import 'GridView/Memory.dart';
-import 'GridView/Quiz/Quiz.dart';
-import 'GridView/RoomCard.dart';
+
 
 
 class HomeView extends StatefulWidget{

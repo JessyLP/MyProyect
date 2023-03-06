@@ -6,9 +6,10 @@ import 'package:flutter/services.dart';
 import 'package:my_proyect/BarMenu.dart';
 import 'package:my_proyect/Views/GridView/Calculo.dart';
 import 'package:my_proyect/Views/GridView/Memory.dart';
-import 'package:my_proyect/Views/GridView/Quiz/Quiz.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
 import 'Firebase/singleton/DataHolder.dart';
+import 'Views/GridView/Quiz/QuestionsScreen.dart';
+import 'Views/GridView/Quiz/Quiz.dart';
 import 'Views/HomeView.dart';
 import 'Views/LoginView.dart';
 import 'Views/PersonalPhotos/FormView.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         title: 'JBrain or Kakapp',
-        initialRoute: '/home',
+        initialRoute: '/splash2',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/splash2',
+        initialRoute: '/quiz',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
@@ -79,6 +80,10 @@ class MyApp extends StatelessWidget {
 
           '/memory' :  (context) =>  Memory(),
           '/quiz' :  (context) =>  Quiz(),
+          '/quiz2' :  (context) =>  QuestionsScreen(),
+
+
+
           '/cal' :  (context) =>  Calculo(),
 
 

@@ -22,7 +22,6 @@ class UsuarioView extends StatelessWidget{
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.deepPurpleAccent.withOpacity(0.4)
             ),
-
           ),
           const SizedBox(
             height: 20,
