@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_proyect/BarMenu.dart';
-import 'package:my_proyect/Views/GridView/Calculo.dart';
+import 'package:my_proyect/Views/GridView/Calculo/Calculo.dart';
 import 'package:my_proyect/Views/GridView/Memory/Memory.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
 import 'Firebase/singleton/DataHolder.dart';
