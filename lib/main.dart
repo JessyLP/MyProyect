@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_proyect/BarMenu.dart';
 import 'package:my_proyect/Views/GridView/Calculo.dart';
-import 'package:my_proyect/Views/GridView/Memory.dart';
+import 'package:my_proyect/Views/GridView/Memory/Memory.dart';
 import 'package:my_proyect/Views/SplashView2.dart';
 import 'Firebase/singleton/DataHolder.dart';
 import 'Views/GridView/Quiz/QuestionsScreen.dart';
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/splash2',
+        initialRoute: '/memory',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
