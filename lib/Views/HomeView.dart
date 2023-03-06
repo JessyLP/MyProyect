@@ -123,7 +123,7 @@ class _HomeViewState extends State<HomeView>{
                         child: Container(
                           alignment: Alignment.bottomCenter,
                           padding: const EdgeInsets.all(8),
-                          child: const Text("MEMORIZA"),
+                          child: const Text("MEMORIZA",style: TextStyle(fontSize: 20,backgroundColor: Colors.black,color: Colors.white),),
                         ),
                       ),
                     ),
@@ -142,7 +142,7 @@ class _HomeViewState extends State<HomeView>{
                         child: Container(
                           alignment: Alignment.bottomCenter,
                           padding: const EdgeInsets.all(8),
-                          child: const Text('CALCULO',textAlign: TextAlign.center,),
+                          child: const Text('CALCULO',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,backgroundColor: Colors.black,color: Colors.white),),
                         ),
                       ),
                     ),
@@ -161,7 +161,7 @@ class _HomeViewState extends State<HomeView>{
                         child: Container(
                           alignment: Alignment.bottomCenter,
                           padding: const EdgeInsets.all(8),
-                          child: const Text('QUIZ'),
+                          child: const Text('QUIZ',style: TextStyle(fontSize: 20,backgroundColor: Colors.black,color: Colors.white),),
                         ),
                       ),
                     ),
