@@ -134,10 +134,6 @@ class _UsuarioViewState extends State<UsuarioView> {
                       content: const Text('Si tiene algún problema, póngase en contacto con nosotros con el siguiente correo: "correo@gmail.com"'),
                       actions: <Widget>[
                         TextButton(
-                          onPressed: () => Navigator.pop(context, 'Cancel'),
-                          child: const Text('Cancel'),
-                        ),
-                        TextButton(
                           onPressed: () => Navigator.pop(context, 'OK'),
                           child: const Text('OK'),
                         ),

@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
-        initialRoute: '/bar',
+        initialRoute: '/splash2',
         routes: {
           '/login' : (context) => LoginView(),
           '/register' : (context) => RegisterView(),
@@ -77,12 +77,10 @@ class MyApp extends StatelessWidget {
           '/bar' :  (context) =>  BarMenu(),
           '/images' :  (context) =>  FormView(),
 
-
+//falla por que al entrar por el bar no reconoce estas rutas
           '/memory' :  (context) =>  Memory(),
           '/quiz' :  (context) =>  Quiz(),
           '/quiz2' :  (context) =>  QuestionsScreen(),
-
-
 
           '/cal' :  (context) =>  Calculo(),
 
