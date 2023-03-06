@@ -16,6 +16,8 @@ class _YourPhotos extends State<YourPhotos>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue,
+
       appBar: AppBar(
         title: const Text('Tus Fotos',textAlign: TextAlign.center),
         backgroundColor: Colors.purple,

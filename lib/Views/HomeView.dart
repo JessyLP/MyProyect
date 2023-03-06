@@ -92,7 +92,7 @@ class _HomeViewState extends State<HomeView>{
         title: const Text('Rooms'),
         backgroundColor: Colors.black,
       ),*/
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.lightBlue,
 
 
       body: Container(

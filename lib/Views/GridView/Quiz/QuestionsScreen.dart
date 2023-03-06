@@ -62,8 +62,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             actions: [
               TextButton(
                 onPressed: () {
-                  Navigator.of(ctx).pop();
-                  Navigator.of(context).pop();
+                  Navigator.of(context).popAndPushNamed("/bar");
                 },
                 child: const Text('Ok'),
               ),
