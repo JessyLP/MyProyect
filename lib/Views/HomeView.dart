@@ -122,22 +122,15 @@ class _HomeViewState extends State<HomeView>{
 
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Column(
+            child: CustomScrollView(
+                primary: false,
+                slivers: <Widget>[
+            SliverPadding(
+            padding: const EdgeInsets.all(20.0),
+            sliver: SliverGrid.count(
+              crossAxisSpacing: 10.0,
+              crossAxisCount: 1,
               children: <Widget>[
-                GridView.count(
-                  primary: true,
-                  padding: const EdgeInsets.all(20),
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    const SizedBox(
-                      height: 70,
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
                     Container(
                       //color: Colors.teal[100],
                       decoration: BoxDecoration(
@@ -215,6 +208,8 @@ class _HomeViewState extends State<HomeView>{
                       ),
                     ),
                   ],
+                //),
+                  ),
                 ),
               ],
             ),
