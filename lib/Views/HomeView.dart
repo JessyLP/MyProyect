@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/GridView/Calculo/Calculo.dart';
+import 'package:my_proyect/Views/GridView/Memory/Memory.dart';
+import 'package:my_proyect/Views/GridView/Quiz/Quiz.dart';
 
 import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
@@ -129,6 +132,12 @@ class _HomeViewState extends State<HomeView>{
                   crossAxisCount: 2,
                   shrinkWrap: true,
                   children: <Widget>[
+                    const SizedBox(
+                      height: 70,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     Container(
                       //color: Colors.teal[100],
                       decoration: BoxDecoration(
@@ -139,7 +148,13 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/memory");
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new Memory(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/memory");
                         },
                         child: Container(
                           alignment: Alignment.bottomCenter,
@@ -158,7 +173,14 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/cal");
+
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new Calculo(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/cal");
                         },
                         child: Container(
                           alignment: Alignment.bottomCenter,
@@ -177,7 +199,13 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/quiz");
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new Quiz(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/quiz");
                           },
                         child: Container(
                           alignment: Alignment.bottomCenter,

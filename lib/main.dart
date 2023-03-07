@@ -18,7 +18,7 @@ import 'Views/SplashView.dart';
 import 'firebase_options.dart';
 
 
-import 'App.dart';
+
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
   WidgetsFlutterBinding.ensureInitialized();

@@ -166,6 +166,9 @@ class _UsuarioViewState extends State<UsuarioView> {
                 padding: EdgeInsets.all(15.0),
                 shape: CircleBorder(),
               ),
+              const SizedBox(
+                height: 20,
+              ),
               //ProfileMenuWidget(icon: Icons.logout,title: "Log out" ,textColor:Colors.deepOrangeAccent[100] ,endIcon: false, onPress: () {  },),
             ],
           ),
