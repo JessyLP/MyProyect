@@ -1,8 +1,8 @@
-#Quiz
+#Quiz.
 
 Un juego de verdadero o falso.
 
-## QuestionsScreen
+## QuestionsScreen.
 
 En esta clase se encuentra la configuracion del questionario.
 

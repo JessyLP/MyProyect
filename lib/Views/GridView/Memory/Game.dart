@@ -12,7 +12,7 @@ class Game {
     Colors.blue,
     Colors.blue
   ];
-  final String hiddenCardpath = "assets/images/hidden.png";
+  final String hiddenCardpath = "assets/images/memory/hidden.png";
   List<String> cards_list = [
     "assets/images/memory/circle.png",
     "assets/images/memory/triangle.png",
