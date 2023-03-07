@@ -35,7 +35,7 @@ class InputText extends StatelessWidget {
         icon: Icon(Icons.person),
         labelText: titulo,
         labelStyle: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 20,
           fontStyle: FontStyle.italic,
         ),

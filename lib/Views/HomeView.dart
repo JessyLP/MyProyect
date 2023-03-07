@@ -128,7 +128,7 @@ class _HomeViewState extends State<HomeView>{
             SliverPadding(
             padding: const EdgeInsets.all(20.0),
             sliver: SliverGrid.count(
-              crossAxisSpacing: 10.0,
+              crossAxisSpacing: 25.0,
               crossAxisCount: 1,
               children: <Widget>[
                     Container(

@@ -68,8 +68,8 @@ class _FormViewState extends State<FormView>{
     //FIN DE SUBIDO DE LA IMAGEN
 
     //INICIO DE INSERCION DEL NUEVO MENSAJE EN LA BASE DE DATOS
-    String path=DataHolder().COLLECTION_ROOMS_NAME+"/"+
-        DataHolder().selectedChatRoom.uid;
+    String path=DataHolder().COLLECTION_PERFILES_NAME+"/"+
+        DataHolder().selectedPerfil.uid+"/fotos";
 
     final docRef = db.collection(path);
 
@@ -115,33 +115,50 @@ class _FormViewState extends State<FormView>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('New Photos'),
+        title: const Text('Añadir fotos',),
         backgroundColor: Colors.deepPurple,
       ),
       body: Container(
+        padding: EdgeInsets.only(top:80,bottom:150,),
         decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: const [0.1, 0.4, 0.7, 0.9],
+            colors: [
+              HexColor("#4b4293").withOpacity(0.8),
+              HexColor("#4b4293"),
+              HexColor("#08418e"),
+              HexColor("#08418e")
+            ],
+          ),
           image: DecorationImage(
-            colorFilter: ColorFilter.mode(HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
-            image: AssetImage("assets/images/arboles.jpg"),
             fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
+            image: AssetImage('assets/images/mar.gif'),
           ),
         ),
+
         child:
             Container(
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
                 Padding(padding: EdgeInsets.all(40)),
                 Nombre,
                 const SizedBox(
                   height: 40,
                 ),
                 ElevatedButton.icon(
+                  style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Colors.deepPurple),
+                  ),
                   onPressed: () {
-                   // selectImage()
+                   selectImage();
                   },
                   icon:  Icon(Icons.add_a_photo),
-                  label: Text("Add photo"),
+                  label: Text("Añadr foto"),
                 ),
                 const SizedBox(
                   height: 70,
@@ -153,14 +170,14 @@ class _FormViewState extends State<FormView>{
                       onPressed:(){
                         btn1Pressed(context);
                       },
-                      child: Text("Aceptar"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.purple),
+                      child: Text("Aceptar"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.blue),
                     ),
                     OutlinedButton(
                       onPressed: () {
                         // Respond to button press
                         Navigator.of(context).popAndPushNamed("/home");
                       },
-                      child: Text("Cancelar"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.purple),
+                      child: Text("Cancelar"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.blue),
                     ),
                   ],
                 )
@@ -168,8 +185,8 @@ class _FormViewState extends State<FormView>{
             ),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
                     stops: const [0.1, 0.4, 0.7, 0.9],
                     colors: [
                       HexColor("#4b4293").withOpacity(0.8),

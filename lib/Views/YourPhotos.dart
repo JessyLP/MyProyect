@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Customs/HexColor.dart';
+import 'PersonalPhotos/FormView.dart';
 
 class YourPhotos extends StatefulWidget{
   @override
@@ -50,7 +51,13 @@ class _YourPhotos extends State<YourPhotos>{
         //foregroundColor: Colors.black,
         mini: true,
         onPressed: () {
-          Navigator.of(context).popAndPushNamed("/images");
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+              builder: (context) => new FormView(),
+            ),
+          );
+          //Navigator.of(context).popAndPushNamed("/images");
         },
         child: Icon(Icons.add,size: 20),
       ),
