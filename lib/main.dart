@@ -21,6 +21,7 @@ import 'firebase_options.dart';
 import 'App.dart';
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -41,7 +42,6 @@ class MyApp extends StatelessWidget {
 
     if(DataHolder().platformAdmin.isAndroidPlatform() ||
         DataHolder().platformAdmin.isIOSPlatform()){
-      WidgetsFlutterBinding.ensureInitialized();
       //print("ENTRO EN ANDROID O IOS");
       materialAppMobile=MaterialApp(
         debugShowCheckedModeBanner: false,
