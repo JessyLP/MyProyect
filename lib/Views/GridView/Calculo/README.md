@@ -4,16 +4,10 @@ Un juego de operaciones fáciles.
 
 ## Calculo.
 
-Se definen los botones.
-Y se comprueba los resultados.
+Se definen los botones para los números y para borrar los datos.
+
+Se utiliza un random para generar los numeros que se utilizarán en la suma.
+
+Y se comprueba los resultados, si se falla , se avanza a la siguiente pregunta.
 
 
-
-## Question.
-
-Esta clase solamente recoge todas las preguntas que se van a utilizar en el questionario.
-
-
-##Quiz.
-
-La pantalla inicial del quiestionario que incluye un texto y una imagen, para empezar a jugar hay que hacer click en el texto de abajo.

@@ -67,7 +67,7 @@ class _CalculoState extends State<Calculo> {
           context: context,
           builder: (context) {
             return ResultMessage(
-              message: 'Correct!',
+              message: '¡Correcto!',
               onTap: goToNextQuestion,
               icon: Icons.arrow_forward,
             );
@@ -77,7 +77,7 @@ class _CalculoState extends State<Calculo> {
           context: context,
           builder: (context) {
             return ResultMessage(
-              message: 'Sorry try again',
+              message: 'Inténtalo de nuevo.',
               onTap: goBackToQuestion,
               icon: Icons.rotate_left,
             );
