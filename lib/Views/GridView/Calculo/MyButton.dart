@@ -17,9 +17,12 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     if (child == 'C') {
       buttonColor = Colors.green;
+
     } else if (child == 'DEL') {
       buttonColor = Colors.red;
     } else if (child == '=') {
+      buttonColor = Colors.deepPurple;
+    }else if (child == 'OK') {
       buttonColor = Colors.deepPurple;
     }
 

@@ -21,7 +21,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   bool trueUserAnswer = true;
 
   Future<void> showAnswer(bool correctAnswer) async {
-    String titleDialog = (correctAnswer) ? '¡Acertaste! :)' : '¡Fallaste! :(';
+    String titleDialog = (correctAnswer) ? 'Era cierto ' : 'Era falso. ';
     return showDialog(
       barrierDismissible: false,
       context: context,
@@ -134,7 +134,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       showAnswer(question.answer);
                       setState(() {
                         if (falseUserAnswer == questions[index].answer) {
-                          score++;
+                          score +=1;
                         } else {
                           score += 0;
                         }

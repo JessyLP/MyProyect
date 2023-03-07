@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/HomeView.dart';
 
 import 'MyButton.dart';
 import 'ResultMessage.dart';
@@ -29,7 +30,10 @@ class _CalculoState extends State<Calculo> {
     '2',
     '3',
     '=',
+    ' ',
     '0',
+    ' ',
+    'OK',
   ];
 
   // number A, number B
@@ -44,6 +48,8 @@ class _CalculoState extends State<Calculo> {
     setState(() {
       if (button == '=') {
         // calculate if user is correct or incorrect
+        checkResult();
+      } else if (button == 'OK') {
         checkResult();
       } else if (button == 'C') {
         // clear the input
@@ -91,22 +97,28 @@ class _CalculoState extends State<Calculo> {
   // GO TO NEXT QUESTION
   void goToNextQuestion() {
     // dismiss alert dialog
-    Navigator.of(context).pop();
+    numberA;numberB;
+    userAnswer='';
+    //Navigator.of(context).pop();
 
     // reset values
     setState(() {
       userAnswer = '';
     });
 
-    // create a new question
-    numberA = randomNumber.nextInt(10);
-    numberB = randomNumber.nextInt(10);
+
   }
 
   // GO BACK TO QUESTION
   void goBackToQuestion() {
     // dismiss alert dialog
-    Navigator.of(context).pop();
+    Navigator.of(context).pop(context);
+    Navigator.push(
+      context,
+      new MaterialPageRoute(
+        builder: (context) => new HomeView(),
+      ),
+    );
   }
 
   @override
