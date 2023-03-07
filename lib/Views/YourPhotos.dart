@@ -45,7 +45,7 @@ class _YourPhotos extends State<YourPhotos>{
       ),
 
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.purple,
         hoverColor: Colors.white,
         //foregroundColor: Colors.black,
         mini: true,
