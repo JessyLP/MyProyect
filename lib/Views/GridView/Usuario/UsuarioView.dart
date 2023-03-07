@@ -77,12 +77,13 @@ class _UsuarioViewState extends State<UsuarioView> {
           ),
         ),
         child: SingleChildScrollView(
-        padding: const EdgeInsets.only(bottom: 300,left: 30,right:30 ,top:120 ),
+        padding: const EdgeInsets.only(bottom: 300,left: 30,right:40 ,top:120 ),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.lightBlueAccent,
+            color: Colors.transparent,
             border: Border.all(
-              width: 8,
+              width: 3,
+              color: Colors.white
             ),
             borderRadius: BorderRadius.circular(12),
           ),
@@ -98,11 +99,11 @@ class _UsuarioViewState extends State<UsuarioView> {
                   borderRadius: BorderRadius.circular(100),
                   child: const Image(
                       image: AssetImage('assets/images/person.png'),
-                      color: Colors.black26),
+                      color: Colors.white),
                 ),
               ),
               const SizedBox(height: 5),
-              Text("Invitado",style: TextStyle(fontSize: 20),),
+              Text("Invitado",style: TextStyle(fontSize: 20,color: Colors.white),),
               /*const SizedBox(height: 20),
               SizedBox(
                 width: 200,

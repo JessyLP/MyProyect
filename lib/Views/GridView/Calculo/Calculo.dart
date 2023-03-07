@@ -99,7 +99,7 @@ class _CalculoState extends State<Calculo> {
     // dismiss alert dialog
     numberA;numberB;
     userAnswer='';
-    //Navigator.of(context).pop();
+    Navigator.of(context).pop();
 
     // reset values
     setState(() {

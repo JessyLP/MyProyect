@@ -40,7 +40,7 @@ class _YourPhotos extends State<YourPhotos>{
         ),
 
       appBar: AppBar(
-        title: const Text('Tus Fotos',textAlign: TextAlign.center),
+        title: const Text('Fotos',textAlign: TextAlign.center),
         backgroundColor: Colors.purple,
         elevation: 10,
       ),
