@@ -93,10 +93,11 @@ class _HomeViewState extends State<HomeView>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        title: const Text('Rooms'),
-        backgroundColor: Colors.black,
-      ),*/
+      appBar: AppBar(
+        title: const Text('Inicio',textAlign: TextAlign.center),
+        backgroundColor: Colors.purple,
+        elevation: 10,
+      ),
       backgroundColor: Colors.lightBlue,
 
 

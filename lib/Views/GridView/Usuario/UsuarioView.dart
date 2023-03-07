@@ -1,9 +1,11 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/GridView/Usuario/CambiarNombre.dart';
 
-import '../Customs/HexColor.dart';
+import '../../../Customs/HexColor.dart';
 
 
 
@@ -49,6 +51,11 @@ class _UsuarioViewState extends State<UsuarioView> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Perfil',textAlign: TextAlign.center),
+        backgroundColor: Colors.purple,
+        elevation: 10,
+      ),
       body:Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -70,7 +77,7 @@ class _UsuarioViewState extends State<UsuarioView> {
           ),
         ),
         child: SingleChildScrollView(
-        padding: const EdgeInsets.only(bottom: 300,left: 30,right:30 ,top:200 ),
+        padding: const EdgeInsets.only(bottom: 300,left: 30,right:30 ,top:120 ),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.lightBlueAccent,
@@ -90,30 +97,54 @@ class _UsuarioViewState extends State<UsuarioView> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: const Image(
-                      image: AssetImage('assets/images/usuario.png'),
+                      image: AssetImage('assets/images/person.png'),
                       color: Colors.black26),
                 ),
               ),
               const SizedBox(height: 5),
-              Text("NOMBRE",style: TextStyle(fontSize: 20),),
-              Text("gmail@gmail.com",style: TextStyle(fontSize: 10),),
-              const SizedBox(height: 20),
+              Text("Invitado",style: TextStyle(fontSize: 20),),
+              /*const SizedBox(height: 20),
               SizedBox(
                 width: 200,
                 child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (context) => new CambiarNombre(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepPurpleAccent
                   ),
                   child: const Text("Editar",style: TextStyle(color: Colors.white,fontSize: 20)),
                 ),
-              ),
+              ),*/
+
+
+
+
               const SizedBox(height: 30),
               const SizedBox(height: 10),
 
               //Menu herramientas:
               RawMaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: const Text('¿Quieres borrar tu perfil?'),
+                      content: const Text('Lo siento esta funcion todavia no esta disponible. :D'),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'NO'),
+                          child: const Text('NO'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
                 elevation: 2.0,
                 fillColor: Colors.white,
                 child: Icon(

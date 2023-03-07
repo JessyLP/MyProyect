@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_proyect/Views/SplashView.dart';
 
 import 'Views/HomeView.dart';
-import 'Views/UsuarioView.dart';
+import 'Views/GridView/Usuario/UsuarioView.dart';
 import 'Views/YourPhotos.dart';
 
 
