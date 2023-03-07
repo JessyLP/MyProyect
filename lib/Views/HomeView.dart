@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
@@ -96,6 +97,26 @@ class _HomeViewState extends State<HomeView>{
 
 
       body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: const [0.1, 0.4, 0.7, 0.9],
+              colors: [
+                HexColor("#4b4293").withOpacity(0.8),
+                HexColor("#4b4293"),
+                HexColor("#08418e"),
+                HexColor("#08418e")
+              ],
+            ),
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
+              image: AssetImage('assets/images/mar.gif'),
+            ),
+          ),
+
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(

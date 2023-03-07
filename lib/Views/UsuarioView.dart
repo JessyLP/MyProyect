@@ -70,7 +70,7 @@ class _UsuarioViewState extends State<UsuarioView> {
           ),
         ),
         child: SingleChildScrollView(
-        padding: const EdgeInsets.only(bottom: 20,left: 80,right:100 ,top:20 ),
+        padding: const EdgeInsets.only(bottom: 300,left: 30,right:30 ,top:200 ),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.lightBlueAccent,
