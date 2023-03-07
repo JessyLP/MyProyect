@@ -149,6 +149,7 @@ class _HomeViewState extends State<HomeView>{
                           );
                           //Navigator.of(context).popAndPushNamed("/memory");
                         },
+
                         child: Container(
                           alignment: Alignment.bottomCenter,
                           padding: const EdgeInsets.all(8),
