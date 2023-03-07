@@ -9,6 +9,7 @@ import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
+import 'GridView/Quiz/QuestionsScreen.dart';
 
 
 
@@ -196,7 +197,7 @@ class _HomeViewState extends State<HomeView>{
                           Navigator.push(
                             context,
                             new MaterialPageRoute(
-                              builder: (context) => new Quiz(),
+                              builder: (context) => new QuestionsScreen(),
                             ),
                           );
                           //Navigator.of(context).popAndPushNamed("/quiz");

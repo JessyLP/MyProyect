@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../BarMenu.dart';
+import '../../../Customs/HexColor.dart';
 import 'Question.dart';
 
 class QuestionsScreen extends StatefulWidget {
@@ -62,7 +64,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             actions: [
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).popAndPushNamed("/bar");
+                  Navigator.pop(ctx);
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new BarMenu(),
+                    ),
+                  );
                 },
                 child: const Text('Ok'),
               ),
@@ -74,8 +82,32 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   Widget build(BuildContext context) {
     final Question question = questions[index];
     return Scaffold(
-      appBar: AppBar(title: Text('Puntuacion: $score'),),
-      body: Container(
+      appBar: AppBar(
+        title: Text('Puntuacion: $score'),
+        backgroundColor: Colors.purple,
+        elevation: 10,
+      ),
+      body:Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: const [0.1, 0.4, 0.7, 0.9],
+            colors: [
+              HexColor("#4b4293").withOpacity(0.8),
+              HexColor("#4b4293"),
+              HexColor("#08418e"),
+              HexColor("#08418e")
+            ],
+          ),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                HexColor("#fff").withOpacity(0.2), BlendMode.dstATop),
+            image: AssetImage('assets/images/mar.gif'),
+          ),
+        ),
+      child:Container(
         height: MediaQuery.of(context).size.height * 1,
         margin: const EdgeInsets.all(15),
         child: Column(
@@ -131,6 +163,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           ],
         ),
       ),
+    ),
     );
   }
 }
