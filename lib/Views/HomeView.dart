@@ -121,6 +121,9 @@ class _HomeViewState extends State<HomeView>{
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: <Widget>[
+                const SizedBox(
+                  height: 100,
+                ),
                 GridView.count(
                   primary: true,
                   padding: const EdgeInsets.all(20),
