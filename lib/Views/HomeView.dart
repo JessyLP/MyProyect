@@ -1,11 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:my_proyect/Views/GridView/Calculo/Calculo.dart';
+import 'package:my_proyect/Views/GridView/Memory/Memory.dart';
+import 'package:my_proyect/Views/GridView/Quiz/Quiz.dart';
 
 import '../Customs/HexColor.dart';
 import '../Firebase/Perfil.dart';
 import '../Firebase/Room.dart';
 import '../Firebase/singleton/DataHolder.dart';
+import 'GridView/Quiz/QuestionsScreen.dart';
 
 
 
@@ -89,10 +93,11 @@ class _HomeViewState extends State<HomeView>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        title: const Text('Rooms'),
-        backgroundColor: Colors.black,
-      ),*/
+      appBar: AppBar(
+        title: const Text('Inicio',textAlign: TextAlign.center),
+        backgroundColor: Colors.purple,
+        elevation: 10,
+      ),
       backgroundColor: Colors.lightBlue,
 
 
@@ -119,19 +124,15 @@ class _HomeViewState extends State<HomeView>{
 
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Column(
+            child: CustomScrollView(
+                primary: false,
+                slivers: <Widget>[
+            SliverPadding(
+            padding: const EdgeInsets.all(20.0),
+            sliver: SliverGrid.count(
+              crossAxisSpacing: 25.0,
+              crossAxisCount: 1,
               children: <Widget>[
-                const SizedBox(
-                  height: 100,
-                ),
-                GridView.count(
-                  primary: true,
-                  padding: const EdgeInsets.all(20),
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  shrinkWrap: true,
-                  children: <Widget>[
                     Container(
                       //color: Colors.teal[100],
                       decoration: BoxDecoration(
@@ -142,8 +143,15 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/memory");
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new Memory(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/memory");
                         },
+
                         child: Container(
                           alignment: Alignment.bottomCenter,
                           padding: const EdgeInsets.all(8),
@@ -161,7 +169,14 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/cal");
+
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new Calculo(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/cal");
                         },
                         child: Container(
                           alignment: Alignment.bottomCenter,
@@ -180,7 +195,13 @@ class _HomeViewState extends State<HomeView>{
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.of(context).popAndPushNamed("/quiz");
+                          Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                              builder: (context) => new QuestionsScreen(),
+                            ),
+                          );
+                          //Navigator.of(context).popAndPushNamed("/quiz");
                           },
                         child: Container(
                           alignment: Alignment.bottomCenter,
@@ -190,6 +211,8 @@ class _HomeViewState extends State<HomeView>{
                       ),
                     ),
                   ],
+                //),
+                  ),
                 ),
               ],
             ),

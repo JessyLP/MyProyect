@@ -11,11 +11,12 @@ class DataHolder{
   static final DataHolder _dataHolder = new DataHolder._internal();
 
   String COLLECTION_ROOMS_NAME="rooms";
-  //String COLLECTION_TEXTS_NAME="texts";
+  String COLLECTION_PERFILES_NAME="perfiles";
 
   String mensaje=" ";
   Perfil perfil= Perfil();
   Room selectedChatRoom = Room();
+  Perfil selectedPerfil = Perfil();
   FBAdmin fbAdmin = FBAdmin();
 
   double SCREEN_WIDTH=0;
