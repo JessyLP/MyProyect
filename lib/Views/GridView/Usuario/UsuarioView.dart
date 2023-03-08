@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:my_proyect/Views/GridView/Usuario/CambiarNombre.dart';
 
 import '../../../Customs/HexColor.dart';
+import '../../LoginView.dart';
 
 
 
@@ -187,7 +188,12 @@ class _UsuarioViewState extends State<UsuarioView> {
 
               RawMaterialButton(
                 onPressed: () {
-                  Navigator.of(context).popAndPushNamed("/login");
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new LoginView(),
+                    ),
+                  );
                 },
                 elevation: 2.0,
                 fillColor: Colors.white,
